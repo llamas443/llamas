@@ -1,149 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="whidth=device-width, initial-scale-8">
-        <title>Buena Alimentación</title>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-      <style>
-        :root{
-          --bg1: #f6fff8;
-          --bg2: #e6fff0;
-          --accent: #2b8a4d; /* green */
-          --accent-2: #f08a2a; /* orange */
-          --card: rgba(255,255,255,0.85);
-          --muted: #4b5563;
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Comunitario: Alimentos Saludables en San Pablo Chimalpa</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
         }
-
-        /* Page base */
-        html,body{
-          height:100%;
-          margin:0;
-          font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-          background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 60%);
-          color: #153b2e;
-          -webkit-font-smoothing:antialiased;
-          -moz-osx-font-smoothing:grayscale;
+        /* Encabezado */
+        header {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        /* Main heading style */
-        body > h1 {
-          font-family: "Playfair Display", serif;
-          text-align:center;
-          font-size:2.4rem;
-          margin:1.25rem auto;
-          color: var(--accent);
-          letter-spacing:0.6px;
-          text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+        /* Sección principal */
+        section {
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-
-        /* Make center-wrapped blocks look like cards */
-        center, body > p, body > center > p {
-          display:block;
-          max-width:980px;
-          margin: 0.75rem auto;
-          background: var(--card);
-          padding:1.0rem 1.25rem;
-          border-radius:14px;
-          box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
-          line-height:1.65;
-          color: #16373a;
+        /* Imágenes */
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 1em auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* Headings inside content */
-        h2{
-          font-family: "Playfair Display", serif;
-          color: var(--accent-2);
-          margin:1.25rem auto 0.5rem;
-          font-size:1.45rem;
-          text-align:center;
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            border: 1px solid #ddd;
         }
-
-        /* Images responsive and styled */
-        img{
-          display:block;
-          margin: 1rem auto;
-          max-width:90%;
-          height:auto;
-          border-radius:10px;
-          object-fit:cover;
-          box-shadow: 0 8px 24px rgba(16, 78, 43, 0.12);
-          border: 3px solid rgba(255,255,255,0.6);
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
         }
-
-        /* Make paragraph text pleasant */
-        p {
-          font-size:1rem;
-          color:var(--muted);
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: 600;
         }
-
-        /* Credits (last paragraph) */
-        body p:last-of-type{
-          text-align:center;
-          background:transparent;
-          box-shadow:none;
-          color:#2b2b2b;
-          font-weight:600;
-          margin-top:1.25rem;
+        /* Botón de llamada a la acción */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #f44336; /* Rojo */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
-
-        /* Utility: emphasize important inline text */
-        strong, b {
-          color: var(--accent);
+        .cta-button:hover {
+            background-color: #d32f2f;
         }
-
-        /* Responsive */
-        @media (max-width:600px){
-          body > h1 { font-size:1.6rem; margin-top:0.8rem; }
-          center, body > p, body > center > p { padding:0.85rem; border-radius:10px; margin:0.6rem; }
+        /* Estilos adicionales */
+        ul, ol {
+            padding-left: 30px;
+            margin-top: 10px;
         }
-      </style>
+        li {
+            margin-bottom: 8px;
+        }
+        h1, h2 {
+            color: #222;
+            margin-bottom: 20px;
+        }
+        /* Estilo para el propósito del taller */
+        .proposito {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Programas y talleres de capacitacion</h1>
 
-    <center><p>TALLER DE CAPACITACIÓN COMUNITARIO PARA LA ELABORACIÓN DE PRODUCTOS ALIMENTICIOS PROCESADOS SALUDABLES PARA LA PREVENCIÖN Y CONTROL DE ENFERMEDADES METABÓLICAS EN LA COMUNIDAD DE SAN PABLO CHIMALPA. 
-       Programas o talleres de capacitación.
-       El programa de capacitación se define como la descripción detallada de un conjunto de actividades de instrucción y aprendizaje estructuradas de tal forma que conduzcan a alcanzar una serie de objetivos previamente determinados. 
-       Los talleres participativos son una herramienta clave para fomentar el aprendizaje colectivo e individual, generando información valiosa y promoviendo la participación equitativa en proyectos comunitarios. A través de metodologías innovadoras y participativas, estos talleres permiten que las comunidades experimenten el trabajo colaborativo y refuercen su compromiso social. 
-       El propósito de estos talleres es proporcionar herramientas educativas y prácticas que impulsen el desarrollo local. Al enfocarse en la capacitación y la innovación, se busca generar un impacto positivo en la calidad de vida de las personas, especialmente en aquellas con condiciones de salud específicas, como enfermedades metabólicas 
-       Para lograr los objetivos y metas se requiere planificar y sistematizar las actividades, es aquí donde la función de elaborar programas de capacitación adquiere mayor importancia, tomando en consideración que, si se aplica de manera adecuada, los participantes podrán trabajar de manera efectiva. 
-       Alimentación saludable 
-       <br><br>
-     <center> <img src="https://thumbs.dreamstime.com/b/buena-alimentaci%C3%B3n-saludable-y-r%C3%A1pida-nutrici%C3%B3n-o-ilustraci%C3%B3n-del-vector-de-hamburguesa-dieta-estilo-vida-para-buen-peso-187270512.jpg"width="400px"height="300px"></center>
+    <header>
+        <h1>Taller Comunitario: Alimentos Saludables para una Vida Mejor en San Pablo Chimalpa</h1>
+    </header>
 
-     <h2>Alimentos saludables</h2>
+    <section>
+        <h2>Bienvenida</h2>
+        <img src="https://images.unsplash.com/photo-1490818387583-1caea2a2c8ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Taller de cocina comunitario">
+        <p>¡Únete a nosotros en este taller transformador diseñado para capacitar a la comunidad de San Pablo Chimalpa en la elaboración de productos alimenticios procesados saludables! Aprenderás a prevenir y controlar enfermedades metabólicas a través de la nutrición y la cocina.</p>
+    </section>
 
+    <section>
+        <h2>¿De qué se trata este taller?</h2>
+        <p>El propósito de estos talleres es proporcionar herramientas educativas y prácticas que impulsen el desarrollo local. Al enfocarse en la capacitación y la innovación, se busca generar un impacto positivo en la calidad de vida de las personas, especialmente en aquellas con condiciones de salud específicas, como enfermedades metabólicas.</p>
+        <p class="proposito">Para lograr los objetivos y metas se requiere planificar y sistematizar las actividades, es aquí donde la función de elaborar programas de capacitación adquiere mayor importancia, tomando en consideración que, si se aplica de manera adecuada, los participantes podrán trabajar de manera efectiva.</p>
+        <img src="https://images.unsplash.com/photo-1543335360-a98a4c84166a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGFsbGVyJTIwZGUlMjBjb2NpbmF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="Taller de cocina">
+    </section>
 
-      <center> Existen muchas vertientes sobre la concepción de lo que debe ser una alimentación saludable,  se ha llegado a manejar que es aquella en la que se restringen alimentos con alto contenido calórico, de origen animal o vegetal, y  principalmente aquellos que son ultra procesados o inclusive los procesados; sin embargo  es claro que debemos encontrar  la descripción más certera que permita a la comunidad redefinir sus hábitos alimenticios y poder llevar un control en su nutrición y así coadyubar en su salud y reducir el índice de enfermedades metabólicas.  
-       Definamos entonces, una alimentación saludable es aquella que nos ayuda a cubrir las necesidades nutricionales que requerimos para cumplir con sus funciones metabólicas o que nuestro cuerpo se desempeñe correctamente, como el proporcionar la energía y con ello mejorar el rendimiento; que contribuye al crecimiento y desarrollo de niños y adolescentes, incluso ayuda a la concentración y atención en actividades más complejas. 
-       Una alimentación saludable ayuda a tener un buen estado de salud, a sanar y llevar los procesos de recuperación, a combatir enfermedades e infecciones y controlar enfermedades metabólicas, como el sobrepeso, obesidad, hipertensión y hasta la diabetes. 
-       Para lograrlo debemos de llevar una dieta   que incluya una mezcla alimentos sólidos y líquidos de todos los grupos de alimentos, ricos en macronutrientes, agua, fibra, vitaminas y minerales; considerar la edad, sexo, actividades que realizamos, el estado de salud es muy importante, pero de igual forma se llega a contemplar los usos, costumbres y hasta los recursos económicos.
-       Enfermedad o trastorno metabólico 
-       Un trastorno metabólico ocurre cuando hay reacciones químicas anormales en el cuerpo que interrumpen este proceso. Cuando esto pasa, es posible que tenga demasiadas o muy pocas sustancias que su cuerpo necesita para mantenerse saludable. Existen diferentes grupos de trastornos. Dentro de esta categoría se encuentra la diabetes mellitus, la hipertensión arterial sistémica, las dislipidemias y la obesidad, cada una de estas patologías tienen signos y síntomas característicos, además de que en una sola persona pueden coexistir más de dos enfermedades. Algunos afectan la descomposición de los aminoácidos, los carbohidratos o los lípidos. 
-     </center>
-       <br><br>
-       <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsWfMBodrGOtbiE-ww6zy4SE2ijyzrnlR_2f3WC9NUdkMA4qT6sAZ3ct8dwVas3YIgL-z-sNDEpcH_947ZHnQpeJy86QtLiSy5uxovs-rBKYzv6MH8kWP40E5JWdQ4nXsUcq2Pp65uZ5M/s1600/plato+del+buen+comer.jpg"width="400px"height="300px"></center>
+    <section>
+        <h2>¿Qué Aprenderás?</h2>
+        <img src="https://images.unsplash.com/photo-1555905907-88a15e4e8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNhbHVkYWJsZSUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=80" alt="Plato de comida saludable">
+        <p>Este taller te proporcionará herramientas educativas y prácticas para mejorar tu calidad de vida y la de tu comunidad. Nos enfocaremos en:</p>
+        <ul>
+            <li><strong>Alimentación Saludable:</strong> Descubre qué significa una alimentación saludable y cómo adaptarla a tus necesidades y recursos.</li>
+            <li><strong>Enfermedades Metabólicas:</strong> Aprende sobre la diabetes, hipertensión, dislipidemia y obesidad, y cómo prevenirlas y controlarlas.</li>
+            <li><strong>Elaboración de Productos Saludables:</strong> Participa en la creación de mermelada sin azúcar con chía, yogur griego natural y chorizo bajo en grasa.</li>
+        </ul>
+    </section>
 
-       <h2>diabetes</h2>
+    <section>
+        <h2>Alimentación Saludable</h2>
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="Alimentación Saludable">
+        <p>Una alimentación saludable es aquella que nos ayuda a cubrir las necesidades nutricionales que requerimos para cumplir con nuestras funciones metabólicas o que nuestro cuerpo se desempeñe correctamente, como el proporcionar la energía y con ello mejorar el rendimiento; que contribuye al crecimiento y desarrollo de niños y adolescentes, incluso ayuda a la concentración y atención en actividades más complejas.</p>
+        <p>Para lograrlo, debemos llevar una dieta que incluya una mezcla de alimentos sólidos y líquidos de todos los grupos de alimentos, ricos en macronutrientes, agua, fibra, vitaminas y minerales; considerar la edad, sexo, actividades que realizamos, el estado de salud es muy importante, pero de igual forma se llega a contemplar los usos, costumbres y hasta los recursos económicos.</p>
+    </section>
 
-       
-       
-       La diabetes es una enfermedad metabólica crónica caracterizada por niveles elevados de glucosa en sangre (azúcar en sangre), que con el tiempo produce daños graves en el corazón, los vasos sanguíneos, los ojos, los riñones y los nervios; esto ocurre cuando el cuerpo se vuelve resistente a la insulina o no produce suficiente insulina.  
-       Se desarrolla cuando el páncreas no produce suficiente insulina o no la produce en absoluto, o cuando el cuerpo no responde adecuadamente a los efectos de la insulina. La diabetes afecta a personas de todas las edades. La mayoría de los casos de diabetes son crónicos (de por vida), y todos se pueden controlar con medicamentos y/o cambios en el estilo de vida.   
-       La diabetes de tipo 1 (denominada anteriormente diabetes insulinodependiente, juvenil o de inicio en la infancia) se caracteriza por una producción deficiente de insulina y requiere la administración diaria de esta hormona.  
-       La diabetes de tipo 2 afecta a la forma en que el cuerpo usa el azúcar (glucosa) para obtener energía, impidiendo que utilice adecuadamente la insulina, lo que puede aumentar las concentraciones de azúcar en la sangre si no se trata. 
-       Con el tiempo, la diabetes de tipo 2 puede causar daños graves al organismo, sobre todo a los nervios y los vasos sanguíneos.  Hay factores que contribuyen a su aparición, como el sobrepeso, no hacer suficiente ejercicio y la herencia genética.
+    <section>
+        <h2>Enfermedades Metabólicas</h2>
+        <img src="https://www.cdc.gov/diabetes/images/basics/what-is-diabetes.jpg" alt="Enfermedades Metabólicas">
+        <p>Un trastorno metabólico ocurre cuando hay reacciones químicas anormales en el cuerpo que interrumpen este proceso. Dentro de esta categoría se encuentra la diabetes mellitus, la hipertensión arterial sistémica, las dislipidemias y la obesidad. Cada una de estas patologías tienen signos y síntomas característicos, además de que en una sola persona pueden coexistir más de dos enfermedades.</p>
+        <ul>
+            <li><strong>Diabetes:</strong> Enfermedad metabólica crónica caracterizada por niveles elevados de glucosa en sangre.</li>
+            <li><strong>Hipertensión:</strong> Se desarrolla cuando la presión de la sangre en nuestros vasos sanguíneos es demasiado alta.</li>
+            <li><strong>Dislipidemia:</strong> Niveles anormales de lípidos en el torrente sanguíneo, factor de riesgo para enfermedades cardiovasculares.</li>
+            <li><strong>Obesidad:</strong> Acumulación anormal o excesiva de grasa que puede ser perjudicial para la salud.</li>
+        </ul>
+    </section>
 
-    </p></center>
-    <p>Elaborado por:Medina Segura Ricardo
-        <br><br>
-        Lopez Antonio Gabriela Yaret
-        <br><br>
-        Escobar Solorzano Ricardo Emiliano
-        <br><br>
-        De la o Moya Leonardo 
-        <br><br>
-    </p>
+    <section>
+        <h2>Causas y Prevención</h2>
+        <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/7759/iStock-629439314.jpg" alt="Causas y Prevención">
+        <p>Las principales causas de las enfermedades metabólicas se relacionan con un desequilibrio entre la cantidad de calorías que se consumen y las que el cuerpo gasta, lo que provoca una acumulación excesiva de grasa corporal. Este problema está influido por factores de estilo de vida, biológicos, médicos y ambientales, que suelen interactuar entre sí.</p>
+        <p>Para contar con un estilo de vida saludable es necesario tener en cuenta factores como: alimentación, actividad física, horas de sueño, medio ambiente, actividades sociales y recreativas. No existe un único estilo de vida saludable, debido a que éste depende de las características de cada persona.</p>
+    </section>
+
+    <section>
+        <h2>Productos Alimenticios Procesados Saludables</h2>
+        <img src="https://th.bing.com/th/id/OIP.jCgHhM8N3vtK-R7_0T4aJAHaE8?rs=1&pid=ImgDetMain" alt="Productos Alimenticios Procesados Saludables">
+        <p>Por lo que la academia de alimentos decidió hacer un taller de capacitación para la comunidad de San Pablo Chimalpa, donde se les capacitará para la elaboración de productos procesados saludables para las personas con enfermedades metabólicas:</p>
+        <ul>
+            <li>Mermelada sin azúcar con chía: alternativa saludable para acompañar panes y galletas.</li>
+            <li>Bebida fermentada tipo yogur griego natural o con frutas locales: fuente de probióticos naturales que favorecen la salud intestinal.</li>
+            <li>Chorizo bajo en grasa, producto cárnico bajo en grasas.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Metodología</h2>
+        <img src="https://www.cetis29.edu.mx/imagenes/carreras/alimentos.jpg" alt="Planta Piloto del Cetis 29">
+        <p>Se realizará un taller comunitario con 20 personas de la comunidad de San Pablo Chimalpa pertenecientes a la Alcaldía de Cuajimalpa de Morelos los días 17, 18, y 19 de noviembre del 2025 con un horario de 9:00 am a 14:00 en la Planta Piloto del Cetis 29.</p>
+        <p>A partir de diversas sesiones teórico - prácticas, presentadas en el cronograma de actividades en las que se mostrarán los antecedentes de salud y nutrición, aspectos técnicos y de procesamiento, y su aplicación para el autocuidado.</p>
+    </section>
+
+    <section>
+        <h2>Cronograma de Actividades</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>DÍA</th>
+                    <th>HORA</th>
+                    <th>ACTIVIDAD</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>LUGAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>17 de noviembre</td>
+                    <td>Por definir</td>
+                    <td>Inauguración</td>
+                    <td>Presentación del presídium y autoridades invitadas.</td>
+                    <td>Auditorio</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Presentación del taller</td>
+                    <td>Breve explicación sobre el Taller.</td>
+                    <td>Auditorio</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Introducción</td>
+                    <td>Importancia sobre la alimentación saludable, para la prevención y el control de enfermedades metabólicas.</td>
+                    <td>Biblioteca</td>
+                </tr>
+               <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Pausa activa</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Explicación</td>
+                    <td>Valor nutritivo de los alimentos</td>
+                    <td>Biblioteca</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Charla</td>
+                    <td>Sobre los procesos de transformación y conservación de alimentos saludables</td>
+                    <td>Biblioteca</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Plática informativa</td>
+                    <td>Sobre los aspectos generales de la mermelada. Metodología del procesamiento de la mermelada.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Práctica</td>
+                    <td>Elaboración de mermelada de frutas.</td>
+                    <td>Planta piloto</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Cierre de la primera sesión</td>
+                    <td>Agradecimiento a los participantes.</td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td>18 de noviembre</td>
+                    <td></td>
+                    <td>Retroalimentación</td>
+                    <td>Aspectos nutrimentales de alimentos procesados.</td>
+                    <td>Biblioteca</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Explicación</td>
+                    <td>Valor nutritivo de los alimentos y el uso de las TICs como herramienta para mejorar los hábitos alimenticios</td>
+                    <td>Biblioteca</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Explicación</td>
+                    <td>metodología para la elaboración del yogurt.</td>
+                    <td>Biblioteca</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Practica</td>
+                    <td>Elaboración de Yogurt</td>
+                    <td>Planta Piloto</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Platica</td>
+                    <td>Importancia nutrimental del yogurt</td>
+                    <td>Biblioteca</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>dinámica grupal</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td>19 de noviembre</td>
+                    <td></td>
+                    <td>Platica</td>
+                    <td>metodologías de conservación, su aplicación para productos más saludables</td>
+                    <td>Biblioteca</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Explicación</td>
+                    <td>metodología para la elaboración de Chorizo bajo en grasa</td>
+                    <td>Biblioteca</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Practica</td>
+                    <td>Elaboración de Chorizo bajo en grasa</td>
+                    <td>Planta Piloto</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Platica</td>
+                    <td>Importancia  nutrimental del Chorizo baja en grasa</td>
+                    <td>Biblioteca</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Cierre y Clausura de Taller</td>
+                    <td></td>
+                    <td>Planta Piloto</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Expo  Alimentos nutritivos procesados</td>
+                    <td></td>
+                    <td>Patio planta piloto</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    
+
 </body>
 </html>
