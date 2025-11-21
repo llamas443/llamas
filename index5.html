@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Creativa Avanzada</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #143428, #51b41785);
+            color: #fff;
+            overflow-x: hidden; /* Evita el scroll horizontal */
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* Encabezado */
+        .header {
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #eee;
+        }
+
+        /* Sección de contenido */
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .content-section:nth-child(even) {
+            flex-direction: row-reverse; /* Invierte el orden en secciones pares */
+        }
+
+        .content {
+            flex: 1 1 45%;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+        }
+
+        .content h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        }
+
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #ddd;
+        }
+
+        .image {
+            flex: 1 1 45%;
+            text-align: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Pie de página */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .footer p {
+            font-size: 0.9em;
+            color: #bbb;
+        }
+
+        /* Animación de partículas */
+        .particle {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 7s infinite linear;
+            pointer-events: none; /* Permite la interacción con elementos debajo */
+        }
+
+        /* Keyframes para la animación de partículas */
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(120vh) translateX(50vw);
+                opacity: 0;
+            }
+        }
+
+        /* Media queries para responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.8em;
+            }
+            .header p {
+                font-size: 1em;
+            }
+            .content-section {
+                flex-direction: column;
+            }
+            .content-section:nth-child(even) {
+                flex-direction: column; /* Elimina la reversión en pantallas pequeñas */
+            }
+            .content, .image {
+                flex: 1 1 100%;
+                margin-bottom: 30px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .content h2 {
+                font-size: 1.8em;
+            }
+            .content p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animación de partículas -->
+    <div class="particle" style="top: 10%; left: 20%;"></div>
+    <div class="particle" style="top: 30%; left: 80%;"></div>
+    <div class="particle" style="top: 60%; left: 40%;"></div>
+    <div class="particle" style="top: 80%; left: 10%;"></div>
+    <div class="particle" style="top: 90%; left: 70%;"></div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+
+        <!-- Encabezado -->
+        <header class="header">
+            <h1>POR UNA VIDA Y ALIMENTACION MEJOR</h1>
+            <p>Tu te cuidas y yo me cuido y todos nos cuidamos</p>
+        </header>
+
+        <!-- Sección de contenido 1 -->
+        <section class="content-section">
+            <div class="content">
+                <h2>Programas de alimentación saludable</h2>
+                <p>Descubre nuestros programas diseñados para mejorar tu salud y bienestar a través de una alimentación balanceada y nutritiva.</p>
+                <div style="margin-top:20px;">
+                    <a href="eje1.html" class="btn-eje1" role="button" aria-label="Ir a eje 1">seccion 1</a>
+                </div>
+
+                <style>
+                    .btn-eje1{
+                        display:inline-block;
+                        padding:12px 20px;
+                        background:linear-gradient(90deg,#63c132,#2fa12a);
+                        color:#fff;
+                        text-decoration:none;
+                        border-radius:10px;
+                        font-weight:600;
+                        box-shadow:0 4px 12px rgba(0,0,0,0.25);
+                        transition:transform .15s ease,box-shadow .15s ease,opacity .15s ease;
+                    }
+                    .btn-eje1:hover{
+                        transform:translateY(-3px);
+                        box-shadow:0 8px 20px rgba(0,0,0,0.35);
+                        opacity:.95;
+                    }
+                    .btn-eje1:active{ transform:translateY(-1px); }
+                </style>
+            </div>
+            <div class="image">
+                <img src="https://cdn.kiwilimon.com/articuloimagen/30294/28567.jpg" alt="programas">
+            </div>
+        </section>
+
+        <!-- Sección de contenido 2 -->
+        <section class="content-section">
+            <div class="content">
+                <h2>Enfermedades causadas por mala alimentacion</h2>
+                <p>¿Sabes que si no comes bien te dañas?
+                    por eso come mejor y sano
+                </p>
+                <div style="margin-top:20px;">
+                    <a href="pagina_2.html" class="btn-pagina_2" role="button" aria-label="Ir a eje 1">seccion 2</a>
+                </div>
+
+                <style>
+                    .btn-pagina_2{
+                        display:inline-block;
+                        padding:12px 20px;
+                        background:linear-gradient(90deg,#63c132,#2fa12a);
+                        color:#fff;
+                        text-decoration:none;
+                        border-radius:10px;
+                        font-weight:600;
+                        box-shadow:0 4px 12px rgba(0,0,0,0.25);
+                        transition:transform .15s ease,box-shadow .15s ease,opacity .15s ease;
+                    }
+                    .btn-pagina_2:hover{
+                        transform:translateY(-3px);
+                        box-shadow:0 8px 20px rgba(0,0,0,0.35);
+                        opacity:.95;
+                    }
+                    .btn-pagina_2:active{ transform:translateY(-1px); }
+                </style>
+                
+            </div>
+            <div class="image">
+                <img src="https://0901.static.prezi.com/preview/v2/kyyoi4mc2wnrzfkuklqvun6ck36jc3sachvcdoaizecfr3dnitcq_3_0.png" alt="alimentos">
+            </div>
+        </section>
+
+        <!-- Sección de contenido 3 -->
+        <section class="content-section">
+            <div class="content">
+                <h2>Metodologia y cronograma de actividades</h2>
+                <p>Estos son los programas y actividades que llevaremos acabo ¡¡NO FALTES TE ESPERAMOS!!</p>
+                <div style="margin-top:20px;">
+                    <a href="pagina_1.html" class="btn-pagina_1" role="button" aria-label="Ir a eje 1">seccion 3</a>
+                </div>
+
+                <style>
+                    .btn-pagina_1{
+                        display:inline-block;
+                        padding:12px 20px;
+                        background:linear-gradient(90deg,#63c132,#2fa12a);
+                        color:#fff;
+                        text-decoration:none;
+                        border-radius:10px;
+                        font-weight:600;
+                        box-shadow:0 4px 12px rgba(0,0,0,0.25);
+                        transition:transform .15s ease,box-shadow .15s ease,opacity .15s ease;
+                    }
+                    .btn-pagina_1:hover{
+                        transform:translateY(-3px);
+                        box-shadow:0 8px 20px rgba(0,0,0,0.35);
+                        opacity:.95;
+                    }
+                    .btn-pagina_1:active{ transform:translateY(-1px); }
+                </style>
+            <div class="image">
+                <img src="https://img.freepik.com/vector-premium/ilustracion-concepto-personas-que-trabajan_958800-110678.jpg" alt="Actividades">
+            </div>
+        </section>
+
+            </div>
+            
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <P>Elaborado por: Lopez Antonio Gabriela Yaret
+            <br>
+            Medina Segura Ricardo
+            <br>
+            Escobar Solorzano Ricardo Emiliano
+            <br>
+            De la O Moya Leonardo
+            <br>
+        </P>
+        <p>&copy; 2024 Vida saludable</p>
+    </footer>
+
+</body>
+</html>
